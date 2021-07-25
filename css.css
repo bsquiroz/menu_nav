@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    font-family: "Zen Tokyo Zoo", cursive;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+.menu {
+    background-color: #ffa0a0;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.menu span {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 2em;
+}
+
+.list {
+    display: flex;
+}
+
+.list li {
+    margin-right: 1em;
+}
+
+.content_icons {
+    display: none;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+}
+
+.content_icons .icon_close {
+    color: #000;
+    font-size: 2em;
+}
+
+.content_icons .icon_multi {
+    color: #000;
+    font-size: 2em;
+}
+
+.icon_none {
+    display: none;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: cornflowerblue;
+}
+.about {
+    width: 100%;
+    height: 100vh;
+    background-color: crimson;
+}
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    background-color: darkmagenta;
+}
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: darksalmon;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    .content_icons {
+        display: block;
+    }
+
+    .menu {
+        height: 100vh;
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        transition: all 1s;
+        margin-left: -100%;
+    }
+
+    .menu_show {
+        margin-left: 0;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+
+    .menu span {
+        margin-left: 0;
+    }
+
+    .list li {
+        margin-right: 0;
+        margin-top: 1em;
+    }
+}
