@@ -23,7 +23,7 @@ body {
 }
 
 .menu {
-    background-color: #ffa0a0;
+    background-color: #000;
     display: flex;
     height: 100px;
     justify-content: space-between;
@@ -38,6 +38,10 @@ body {
     margin-left: 2em;
 }
 
+.menu span a {
+    color: #fff;
+}
+
 .list {
     display: flex;
 }
@@ -46,11 +50,21 @@ body {
     margin-right: 1em;
 }
 
+.list li a {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.list li a:hover {
+    font-weight: bold;
+}
+
 .content_icons {
     display: none;
     position: fixed;
     bottom: 1em;
     right: 1em;
+    cursor: pointer;
 }
 
 .content_icons .icon_close {
@@ -61,6 +75,14 @@ body {
 .content_icons .icon_multi {
     color: #000;
     font-size: 2em;
+}
+
+.btn {
+    transition: 0.3s transform;
+}
+
+.btn:active {
+    transform: scale(0.9);
 }
 
 .icon_none {
@@ -104,7 +126,7 @@ body {
         position: fixed;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
+        width: 50%;
         transition: all 1s;
         margin-left: -100%;
     }
